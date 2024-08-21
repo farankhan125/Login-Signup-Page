@@ -1,0 +1,289 @@
+@font-face {
+    font-family: 'humanist';
+    src: url('fonts/Humanist521BT.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #085D37;
+    color: #085D37;
+    font-family: humanist;
+}
+
+.main-body {
+    width: 65%;
+    height: 600px;
+    margin: 50px auto;
+    background-color: white;
+    position: relative;
+}
+
+.animate-box {
+    width: 40%;
+    height: 600px;
+    background-color: #085D37;
+    background-position-x: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 40px 0 0 40px;
+    position: absolute;
+    right: 0;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.animate-box>h1 {
+    color: white;
+    font-weight: 100;
+}
+
+.login, .signup {
+    width: 60%;
+    padding: 60px 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    transition: 0.5s ease-in-out;
+}
+
+.login>h1, .signup>h1 {
+    margin-bottom: 25px;
+    text-align: center;
+    font-weight: 100;
+}
+
+.signup {
+    position: absolute;
+    right: 0;
+    gap: 20px;
+    opacity: 0;
+}
+
+.signup>input {
+    padding: 0 20px;
+}
+
+label {
+    position: relative;
+}
+
+.svg {
+    position: absolute;
+    top: 13px;
+    left: 20px;
+}
+
+input {
+    width: 100%;
+    height: 45px;
+    padding: 0 43px;
+    color: #085D37;
+    border: solid #085D37 2px;
+    border-radius: 30px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+}
+
+input::placeholder {
+    color: #085D37;
+    font-family: humanist;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    opacity: 0.5;
+}
+
+input:focus {
+    border: solid #0b8f54 2px;
+}
+
+span {
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.f-pass {
+    margin-top: -40px;
+    margin-right: 25px;
+    text-align: end;
+}
+
+.button {
+    height: 45px;
+    padding: 8.5px 0;
+    color: white;
+    background-color: #085D37;
+    border-radius: 30px;
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: 0.3s ease-in-out;
+}
+
+.special:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: #0b8f54;
+}
+
+.visible-hide {
+    display: none;
+}
+
+.effect {
+    animation: bouncerRight 1.2s ease-out;
+}
+
+.effect1 {
+    animation: bouncerLeft 1.2s ease-out;
+}
+
+.bg-pic1 {
+    background-image: url("imgs/gaming1.jpg");
+    transition: 0.5s ease-in-out;
+}
+
+.bg-pic2 {
+    background-image: url("imgs/new.JPG");
+    transition: 0.5s ease-in-out;
+}
+
+/* Animations Below */
+
+@keyframes bouncerRight {
+
+    from {
+        right: 60%;
+        width: 40%;
+        border-radius: 0px 40px 40px 0px;
+    }
+
+    40% {
+        right: 0%;
+        border-radius: 40px 0px 0px 40px;
+    }
+
+    60% {
+        right: 0%;
+        border-radius: 40px 0px 0px 40px;
+        width: 10%;
+    }
+
+    to {
+        right: 0%;
+        border-radius: 40px 0px 0px 40px;
+        width: 40%;
+    }
+
+}
+
+@keyframes bouncerLeft {
+
+    from {
+        left: 60%;
+        width: 40%;
+        border-radius: 40px 0px 0px 40px;
+    }
+
+    40% {
+        left: 0%;
+        border-radius: 0px 40px 40px 0px;
+    }
+
+    60% {
+        left: 0%;
+        border-radius: 0px 40px 40px 0px;
+        width: 10%;
+    }
+
+    to {
+        left: 0%;
+        border-radius: 0px 40px 40px 0px;
+        width: 40%;
+    }
+
+}
+
+/* Media Quries Below */
+
+@media screen and (max-width: 1200px) {
+    .main-body {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 1000px) {
+    .main-body {
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .main-body {
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 750px) {
+    .main-body {
+        width: 70%;
+        height: 100vh;
+        margin: 0 auto;
+        background-image: url("imgs/gaming1.jpg");
+        background-size: cover;
+        background-position-x: center;
+    }
+
+    .animate-box {
+        display: none;
+    }
+
+    .login, .signup {
+        width: 100%;
+        padding: 60px 40px;
+    }
+
+    .login>h1, .signup>h1, span, input::placeholder {
+        color: white;
+        opacity: 1;
+    }
+
+    .button {
+        background-color: white;
+        color: #111111;
+    }
+
+    input {
+        background-color: transparent;
+        border: solid white 2px;
+    }
+
+    .svg path {
+        stroke: white;
+    }
+
+    span {
+        letter-spacing: 0.5px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .main-body {
+        width: 100%;
+    }
+}
