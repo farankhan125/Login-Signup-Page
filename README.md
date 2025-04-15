@@ -18,7 +18,7 @@ The Animated Login Signup Page is a sleek, modern, and interactive web component
 
 Want to see it live in action? Click the link below:
 
-[Login-Signup Page](https://farankhan125.github.io/Login-Signup-Page/))
+[Login-Signup Page](https://farankhan125.github.io/Login-Signup-Page/)
 
 ---
 
@@ -57,8 +57,8 @@ You're all set! ✨ No additional tools or setup required.
 
 ## 📸 Demo Preview
 
-![Image1](Showcase%20Images%20For%20Readme/img1.JPG)
-![Image2](Showcase%20Images%20For%20Readme/img2.JPG)
+![Image1](imgs/img1.JPG)
+![Image2](imgs/img2.JPG)
 
 ---
 
